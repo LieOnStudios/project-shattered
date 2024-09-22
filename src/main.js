@@ -3,8 +3,6 @@ const { invoke } = window.__TAURI__.core;
 let greetInputEl;
 let greetMsgEl;
 
-//testing something
-
 async function greet() {
   // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
   greetMsgEl.textContent = await invoke("greet", { name: greetInputEl.value });
