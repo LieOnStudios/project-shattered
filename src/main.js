@@ -24,14 +24,6 @@ async function save_data() {
   console.log( file_data );
 }
 
-// async function load_data() {
-//   let file_data = await invoke("load_data_from_file", { path: "../data/ids.json" });
-//   let json = JSON.parse(file_data);
-//   greetInputEl.value = json.curseforge;
-// }
-
-// load_data();
-
 // greetInputEl.addEventListener("input", () => {
 //   greetMsgEl = document.querySelector("#greet-msg");
 //   greet();
