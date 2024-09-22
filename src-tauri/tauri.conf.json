@@ -15,8 +15,7 @@
         "width": 1280,
         "height": 720,
         "minWidth": 400,
-        "minHeight": 225,
-        "alwaysOnTop": true
+        "minHeight": 225
       }
     ],
     "security": {
