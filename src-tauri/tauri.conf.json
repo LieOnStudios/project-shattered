@@ -11,7 +11,7 @@
     "withGlobalTauri": true,
     "windows": [
       {
-        "title": "Shattered",
+        "title": "Project Shattered",
         "width": 1280,
         "height": 720,
         "minWidth": 400,
