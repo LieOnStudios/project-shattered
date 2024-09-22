@@ -4,9 +4,14 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "tauri": "tauri"
+    "tauri": "tauri",
+    "td": "tauri dev",
+    "lh": "servor src index.html 8080 --reload"
   },
   "devDependencies": {
     "@tauri-apps/cli": ">=2.0.0-rc.0"
+  },
+  "dependencies": {
+    "servor": "^4.0.2"
   }
 }
