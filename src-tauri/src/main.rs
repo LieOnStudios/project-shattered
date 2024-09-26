@@ -14,8 +14,9 @@ fn save_data_to_file(data_str: &str, path: &str) {
 
 #[tauri::command]
 fn load_data_from_file(path: &str) -> String {
-    if fs::metadata(path).is_err() {
-        return "error 404".to_string();
+    let err_check = fs::metadata(path);
+    if err_check.is_err() {
+        return err_check.unwrap_err().to_string()
     }
     let json = fs::read_to_string(path).unwrap();
     json.into()
@@ -35,8 +36,7 @@ async fn load_data_from_https(url: &str, headers: &str) -> Result<serde_json::Va
 fn get_data_from_https(url: &str, headers: &str) -> String {
     let data = load_data_from_https(url, headers);
     if data.is_err() {
-        println!("{}", data.unwrap_err());
-        return "error".to_string()
+        return data.unwrap_err().to_string()
     }
     serde_json::to_string_pretty(&data.unwrap()).unwrap()
 }
