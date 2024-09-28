@@ -18,8 +18,8 @@ fn load_data_from_file(path: &str) -> String {
     if err_check.is_err() {
         return err_check.unwrap_err().to_string()
     }
-    let json = fs::read_to_string(path).unwrap();
-    json.into()
+    let file_data = fs::read_to_string(path).unwrap();
+    file_data.into()
 }
 
 #[tokio::main]

@@ -10,6 +10,10 @@
 - Upload multiple versions to both sites
 - Total download count from Curseforge + Modrinth
 - Simple statistics from both sites
+- Title templates for uploading (gloabal and per-project)
+- Description templates for uploading (gloabal and per-project)
+- Keys for Titles & Descriptions (e.g. `${project-name}`, `${version}`, `${max-minecaft-version}`, `${minecraft-version-range}`)
+
 
 ## Using Tauri
 
