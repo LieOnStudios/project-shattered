@@ -1,6 +1,9 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 use std::fs::{ self };
+use std::path::{ self };
+
+use tauri::http::{ HeaderMap, HeaderValue };
 
 #[tauri::command]
 fn save_data_to_file(data_str: &str, path: &str) {
@@ -17,17 +20,30 @@ fn load_data_from_file(path: &str) -> String {
     let err_check = fs::metadata(path);
     if err_check.is_err() {
         return err_check.unwrap_err().to_string()
-    }
+    } 
+    let file_path = path::absolute(path);
+    println!("{}", file_path.unwrap().display().to_string());
     let file_data = fs::read_to_string(path).unwrap();
     file_data.into()
+}
+
+fn convert_json_to_headers(data: &str) -> HeaderMap {
+    let mut map = HeaderMap::new();
+    let headers_json: serde_json::Value = serde_json::from_str(&data).unwrap();
+    // println!("{}", headers_json[0]["header"]);
+    if let Some(headers) = headers_json.as_array() {
+        for header in headers {
+            map.insert(header["header"].as_str().unwrap(), HeaderValue::from_str(header["value"].as_str().unwrap()).unwrap());
+        }
+    }
+
+    map
 }
 
 #[tokio::main]
 async fn load_data_from_https(url: &str, headers: &str) -> Result<serde_json::Value, reqwest::Error> {
     let client = reqwest::Client::new();
-    let headers_json_wraped: Result<serde_json::Value, serde_json::Error> = serde_json::from_str(headers);
-    let header_json = headers_json_wraped.unwrap();
-    let data: serde_json::Value = client.get(url).header(header_json["key"].as_str().unwrap(), header_json["value"].as_str().unwrap()).send().await?.json().await?;
+    let data: serde_json::Value = client.get(url).headers(convert_json_to_headers(&headers)).send().await?.json().await?;
 
     Ok(data)
 }
