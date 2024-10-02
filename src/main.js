@@ -11,7 +11,7 @@ async function save_data(file_path, data_str) {
 }
 
 async function load_data() {
-  let file_data = await invoke("get_data_from_https", { url: "https://api.modrinth.com/v2/project/HKKqmr2p", headers: `[{"header": "x-api-key", "value": ""}]` });
+  let file_data = await invoke("get_data_from_https", { url: "https://api.modrinth.com/v2/project/HKKqmr2p", headers: '[{"header": "x-api-key", "value": ""}]' });
   let curseforge_key = await invoke("load_data_from_file", { path: `${appDataDirPath}\\data\\keys.json` });
   let curseforge_key_json = JSON.parse(curseforge_key);
   // let file_data = await invoke("get_data_from_https", { url: "https://api.curseforge.com/v1/mods/858032", headers: `{"key": "x-api-key", "value": "${header_json["curseforge"]}"}` });

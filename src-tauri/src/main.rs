@@ -3,7 +3,7 @@
 use std::fs::{ self };
 use std::path::{ self };
 
-use tauri::http::{ HeaderMap, HeaderValue };
+use tauri::http::{HeaderMap, HeaderValue};
 
 #[tauri::command]
 fn save_data_to_file(data_str: &str, path: &str) {
@@ -29,9 +29,9 @@ fn load_data_from_file(path: &str) -> String {
 
 fn convert_json_to_headers(data: &str) -> HeaderMap {
     let mut map = HeaderMap::new();
-    let headers_json: serde_json::Value = serde_json::from_str(&data).unwrap();
-    // println!("{}", headers_json[0]["header"]);
-    if let Some(headers) = headers_json.as_array() {
+
+    let data_json = serde_json::from_str::<serde_json::Value>(data).unwrap();
+    if let Some(headers) = data_json.as_array() {
         for header in headers {
             map.insert(header["header"].as_str().unwrap(), HeaderValue::from_str(header["value"].as_str().unwrap()).unwrap());
         }
