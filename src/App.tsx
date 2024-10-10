@@ -1,4 +1,3 @@
-import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import { invoke } from "@tauri-apps/api/core";
 import { appDataDir } from "@tauri-apps/api/path";
@@ -39,7 +38,7 @@ function App() {
       >
         <input
           id="greet-input"
-          onChange={(e) => getData()}
+          onChange={() => getData()}
           placeholder="Enter a name..."
         />
         <button type="submit">Greet</button>

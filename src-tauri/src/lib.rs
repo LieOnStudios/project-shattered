@@ -39,14 +39,12 @@ fn convert_json_to_headers(data: &str) -> HeaderMap {
             let header_key = header["header"].as_str().unwrap().to_string();
             let header_value = header["value"].as_str().unwrap().to_string();
 
-            // Parse the header_key as a HeaderName (Required by HeaderMap::)
-            let header_name = header_key.parse::<HeaderName>().unwrap();
-
             // Insert the owned values into the HeaderMap
-            map.insert(header_name, HeaderValue::from_str(&header_value).unwrap());
+            map.insert(header_key.parse::<HeaderName>().unwrap(), HeaderValue::from_str(&header_value).unwrap());
         }
     }
 
+    // Return HeaderMap
     map
 }
 
