@@ -1,14 +1,15 @@
 {
-  "$schema": "https://schema.tauri.app/config/2.0.0-rc",
+  "$schema": "https://schema.tauri.app/config/2.0.0",
   "productName": "shattered",
   "version": "0.1.0",
   "identifier": "com.shattered.app",
   "build": {
-    "frontendDist": "../src",
-    "devUrl": "http://localhost:8080/"
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
   },
   "app": {
-    "withGlobalTauri": true,
     "windows": [
       {
         "title": "Project Shattered",
