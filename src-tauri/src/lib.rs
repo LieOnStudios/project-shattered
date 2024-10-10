@@ -5,11 +5,14 @@ use tauri::http::{HeaderMap, HeaderName, HeaderValue};
 
 #[tauri::command]
 fn save_data_to_file(data_str: &str, path: &str) {
+    // Dir eer check (if it exists).
     if fs::metadata(path).is_err() {
+        // Creates dir if it cannot be found.
         let split_path = path.split("/");
         let no_file_path = path.replace(split_path.last().unwrap(), "");
         let _ = fs::create_dir_all(no_file_path);
     }
+    // Writes data to file.
     let _ = fs::write(path, data_str);
 }
 
