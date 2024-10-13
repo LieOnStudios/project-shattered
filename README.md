@@ -29,7 +29,7 @@
 - Using [**Vite**](https://vite.dev/) as a fast and powerful frontend compiler with:
 - - [**React**](https://react.dev/): a Javascript library to build pages.
 - - [**Tailwind**](https://tailwindcss.com/): a CSS utility framework.
-- Coded and ran with [VSCodium](https://vscodium.com/).
+- Coded and ran with [**VSCodium**](https://vscodium.com/).
 
 ## Team Developers:
 
