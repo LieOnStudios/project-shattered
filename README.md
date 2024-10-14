@@ -41,4 +41,4 @@
 
 ### Licence
 
-Project Shattered is licenced under MIT, Copyright (c) 2024 ***LieOn Studios*** - full [LICENCE](https://github.com/LieOnStudios/project-shattered/blob/windows/LICENSE)
+Project Shattered is licenced under the MIT Licence, Copyright (c) 2024 ***LieOn Studios*** - see the full [LICENCE](https://github.com/LieOnStudios/project-shattered/blob/windows/LICENSE)
