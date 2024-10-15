@@ -31,7 +31,7 @@
 - - [**Tailwind**](https://tailwindcss.com/): a CSS utility framework.
 - Coded and ran with [**VSCodium**](https://vscodium.com/).
 
-## Team Developers:
+## Development Team:
 
 - [**LieOnLion**](https://github.com/LieOnLion) as the Lead Developer.
 
