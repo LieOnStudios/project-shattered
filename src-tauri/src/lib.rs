@@ -1,4 +1,5 @@
-use file::commands::{load_data_from_file, save_data_to_file, get_data_from_https};
+use file::commands::{fetch_get, read_file, write_file};
+
 
 mod file;
 
@@ -7,9 +8,9 @@ pub fn run() {
     tauri::Builder::default()
         .plugin(tauri_plugin_shell::init())
         .invoke_handler(tauri::generate_handler![
-            load_data_from_file,
-            save_data_to_file,
-            get_data_from_https
+            read_file,
+            write_file,
+            fetch_get
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

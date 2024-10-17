@@ -1,4 +1,21 @@
-use tauri::http::{HeaderMap, HeaderName, HeaderValue};
+use tauri::{http::{HeaderMap, HeaderName, HeaderValue}, Manager};
+
+use std::fs::{self};
+
+pub fn read_data_from_file(path: &str) -> Result<String, Box<dyn std::error::Error>> {
+    // Reads file data
+    // Returns file data and err
+    let file_data = fs::read_to_string(path);
+    Ok(file_data.unwrap().into())
+}
+
+// pub fn write_data_to_file(data: &str, path: &str) {
+//     let _ = fs::write(path, data);
+// }
+
+// pub fn create_new_dirs(path: &str) {
+
+// }
 
 // Fixed by @NotGhoull - https://github.com/LieOnLion/project-shattered/commit/3dd2e1ec6600795a99533b8e43b643b916078f56
 pub fn convert_json_to_headers(data: &str) -> HeaderMap {
@@ -22,7 +39,7 @@ pub fn convert_json_to_headers(data: &str) -> HeaderMap {
 }
 
 #[tokio::main]
-pub async fn load_data_from_https(url: &str, headers: &str) -> Result<serde_json::Value, reqwest::Error> {
+pub async fn read_data_from_https(url: &str, headers: &str) -> Result<serde_json::Value, reqwest::Error> {
     // Create a new Client.
     // Send a GET request to server with headers.
     let client = reqwest::Client::new();
@@ -32,4 +49,16 @@ pub async fn load_data_from_https(url: &str, headers: &str) -> Result<serde_json
 
     // Returns data and err.
     Ok(data)
+}
+
+pub fn get_add_data_dir() -> String {
+    // Get app_data_dir from AppHandle.
+    // Converts binding to string.
+
+    // TODO: fix the error :/ *expected value, found struct `tauri::App`* 
+    let binding = tauri::App.app_handle().path().app_data_dir().unwrap();
+    let app_data_dir = binding.to_str().unwrap();
+
+    // Return app_data_dir.
+    app_data_dir.to_string()
 }

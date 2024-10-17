@@ -1,10 +1,10 @@
-use super::manager::{load_data_from_https};
+use super::manager::{read_data_from_file, read_data_from_https};
 
 use std::fs::{self};
 use std::path::{self};
 
 #[tauri::command]
-pub fn save_data_to_file(data_str: &str, path: &str) {
+pub fn write_file(data_str: &str, path: &str) {
     // Dir err check (if it exists).
     if fs::metadata(path).is_err() {
         // Creates dir if it cannot be found.
@@ -17,28 +17,27 @@ pub fn save_data_to_file(data_str: &str, path: &str) {
 }
 
 #[tauri::command]
-pub fn load_data_from_file(path: &str) -> String {
-    // File err check (if it exists and can be read).
-    let err_check = fs::metadata(path);
-    if err_check.is_err() {
+pub fn read_file(path: &str) -> String {
+    // Passes values into read_data_from_file().
+    // data err check (if file exists and can be read).
+    let file_data = read_data_from_file(path);
+    if file_data.is_err() {
         // Returns err and absolute file path.
-        return err_check.unwrap_err().to_string() + " from file " + &path::absolute(path).unwrap().display().to_string();
+        return file_data.unwrap_err().to_string() + " from file: " + &path::absolute(path).unwrap().display().to_string();
     }
-    // Read file data.
     // Returns file data.
-    let file_data = fs::read_to_string(path).unwrap();
-    file_data.into()
+    return file_data.unwrap()
 }
 
 #[tauri::command]
-pub fn get_data_from_https(url: &str, headers: &str) -> String {
-    // Passes values into load_data_from_https().
-    // Data err check.
-    let data = load_data_from_https(url, headers);
+pub fn fetch_get(url: &str, headers: &str) -> String {
+    // Passes values into read_data_from_https().
+    // data err check.
+    let data = read_data_from_https(url, headers);
     if data.is_err() {
-        // Returns data err.
-        return data.unwrap_err().to_string();
+        // Returns data err and absolute url.
+        return data.unwrap_err().to_string() + " from url: " + &url.to_string();
     }
-    // Returns the data in JSON (pretty).
-    serde_json::to_string_pretty(&data.unwrap()).unwrap()
+    // Returns the data in JSON (pretty string).
+    return serde_json::to_string_pretty(&data.unwrap()).unwrap()
 }
