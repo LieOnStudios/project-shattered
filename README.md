@@ -2,7 +2,7 @@
 
 **Project Shattered** will be a simple dashboard and manager app for Minecraft Mod Developers with Curseforge and Modrinth support! An app for Mod Developers to upload multiple new project versions to both sites simultaneously with minimal effort.
 
-> #### Note
+> [!NOTE]
 > Project Shattered is in very **early** development, features will be experimental and may be removed.\
 > A useable alpha release is expected to be available in early to mid 2025.
 

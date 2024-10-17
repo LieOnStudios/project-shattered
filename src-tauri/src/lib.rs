@@ -1,6 +1,5 @@
 use file::commands::{fetch_get, read_file, write_file};
 
-
 mod file;
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]

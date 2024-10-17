@@ -6,10 +6,11 @@ import "./App.css";
 function App() {
   async function getData() {
     const appDataDirPath = await appDataDir();
-    let keys: string = await invoke("load_data_from_file", { path: `${appDataDirPath}\\data\\keys.json` });
+    let keys: string = await invoke("read_file", { path: `${appDataDirPath}\\data\\keys.json` });
     let keys_json = JSON.parse(keys);
-    console.log(await invoke("get_data_from_https", { url: "https://api.curseforge.com/v1/mods/858032", headers: `[{"header": "x-api-key", "value": "${keys_json["curseforge"]}"}]` }));
+    console.log(await invoke("fetch_get", { url: "https://api.curseforge.com/v1/mods/858032", headers: `[{"header": "x-api-key", "value": "${keys_json["curseforge"]}"}]` }));
   }
+  getData()
 
   return (
     <div className="container">

@@ -1,4 +1,4 @@
-use tauri::{http::{HeaderMap, HeaderName, HeaderValue}, Manager};
+use tauri::http::{HeaderMap, HeaderName, HeaderValue};
 
 use std::fs::{self};
 
@@ -49,16 +49,4 @@ pub async fn read_data_from_https(url: &str, headers: &str) -> Result<serde_json
 
     // Returns data and err.
     Ok(data)
-}
-
-pub fn get_add_data_dir() -> String {
-    // Get app_data_dir from AppHandle.
-    // Converts binding to string.
-
-    // TODO: fix the error :/ *expected value, found struct `tauri::App`* 
-    let binding = tauri::App.app_handle().path().app_data_dir().unwrap();
-    let app_data_dir = binding.to_str().unwrap();
-
-    // Return app_data_dir.
-    app_data_dir.to_string()
 }

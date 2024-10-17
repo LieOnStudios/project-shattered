@@ -4,7 +4,7 @@ use std::fs::{self};
 use std::path::{self};
 
 #[tauri::command]
-pub fn write_file(data_str: &str, path: &str) {
+pub fn write_file(data: &str, path: &str) {
     // Dir err check (if it exists).
     if fs::metadata(path).is_err() {
         // Creates dir if it cannot be found.
@@ -13,7 +13,7 @@ pub fn write_file(data_str: &str, path: &str) {
         let _ = fs::create_dir_all(no_file_path);
     }
     // Writes data to file.
-    let _ = fs::write(path, data_str);
+    let _ = fs::write(path, data);
 }
 
 #[tauri::command]
