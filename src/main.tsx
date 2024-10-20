@@ -14,19 +14,22 @@ import UnderConstruction from './pages/UnderConstruction.tsx'
 
 // Components
 import TitleBar from './components/TitleBar.tsx'
-import Nav from './components/Nav.tsx'
+import NavBar from './components/NavBar.tsx'
 
 createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <Router>
       <TitleBar />
-      <div className="px-page max-sm:px-page relative overflow-hidden">
-        <Routes>
-          <Route path='/' element={<Home />}/>
-          <Route path='/upload' element={<UnderConstruction />}/>
-          <Route path="*" element={<NotFound />}/>
-        </Routes>
-      </div>
-    </Router>
+      <Router>
+        <div className='inline-flex w-full flex-grow'>
+          <NavBar />
+          <div className='flex flex-col justify-center bg-grey-200 flex-grow'>
+            <Routes>
+              <Route path='/' element={<Home />}/>
+              <Route path='/upload' element={<UnderConstruction />}/>
+              <Route path='*' element={<NotFound />}/>
+            </Routes>
+          </div>
+        </div>
+      </Router>
   </React.StrictMode>
 )
