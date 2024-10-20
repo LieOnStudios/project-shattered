@@ -24,10 +24,7 @@ export default {
         primary: {
           100: '#5c27ce'
         }
-      },
-      borderRadius: {
-        avg: '0.25rem',
-      },
+      }
     },
   },
   plugins: [],

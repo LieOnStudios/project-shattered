@@ -13,13 +13,13 @@ import NotFound from './pages/NotFound.tsx'
 import UnderConstruction from './pages/UnderConstruction.tsx'
 
 // Components
-import TopBar from './components/TopBar.tsx'
+import TitleBar from './components/TitleBar.tsx'
 import Nav from './components/Nav.tsx'
 
 createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <Router>
-      <TopBar />
+      <TitleBar />
       <div className="px-page max-sm:px-page relative overflow-hidden">
         <Routes>
           <Route path='/' element={<Home />}/>
