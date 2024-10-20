@@ -1,7 +1,8 @@
 {
   "name": "shattered",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.0.1",
+  "buildType": "alpha",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -13,7 +14,8 @@
     "@tauri-apps/api": ">=2.0.0",
     "@tauri-apps/plugin-shell": ">=2.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.27.0"
   },
   "devDependencies": {
     "@tauri-apps/cli": ">=2.0.0",
