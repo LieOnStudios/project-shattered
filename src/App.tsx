@@ -8,13 +8,4 @@ function App() {
     let keys_json = JSON.parse(keys);
     console.log(await invoke("fetch_get", { url: "https://api.curseforge.com/v1/mods/858032", headers: `[{"header": "x-api-key", "value": "${keys_json["curseforge"]}"}]` }));
   }
-  getData()
-
-  return (
-    <>
-      
-    </>
-  );
 }
-
-export default App;

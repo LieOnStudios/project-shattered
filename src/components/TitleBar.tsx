@@ -1,9 +1,10 @@
-import { LuMinus } from "react-icons/lu";
-import { FiMinimize, FiMaximize } from "react-icons/fi";
-import { CgClose } from "react-icons/cg";
 import { getCurrentWindow } from '@tauri-apps/api/window';
 import { useState } from "react";
 const appWindow = getCurrentWindow();
+
+import { LuMinus } from "react-icons/lu";
+import { FiMinimize, FiMaximize } from "react-icons/fi";
+import { CgClose } from "react-icons/cg";
 
 const TitleBar = () => {
     const [maximised, setMaximised] = useState<boolean>(false);

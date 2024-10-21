@@ -16,9 +16,9 @@
     --colour-grey-900: #444;
     --colour-grey-900: #333;
     --colour-grey-950: #222;
+
     /* --colour-primary: ;
     --colour-secondary: 111 114 185; */
-    
   }
   :root[data-theme='dark'] {
     --colour-grey-50: #111;
@@ -38,9 +38,21 @@
     --colour-secondary: 111 114 185; */
   }
   :root[data-theme='oled'] {
+    --colour-grey-50: #000;
     --colour-grey-100: #000;
-    --colour-primary: 255 115 179;
-    --colour-secondary: 111 114 185;
+    --colour-grey-200: #000;
+    --colour-grey-300: #222;
+    --colour-grey-400: #444;
+    --colour-grey-500: #555;
+    --colour-grey-600: #666;
+    --colour-grey-700: #777;
+    --colour-grey-800: #aaa;
+    --colour-grey-900: #bbb;
+    --colour-grey-900: #ccc;
+    --colour-grey-950: #eee;
+    
+    /* --colour-primary: 255 115 179;
+    --colour-secondary: 111 114 185; */
   }
 }
 

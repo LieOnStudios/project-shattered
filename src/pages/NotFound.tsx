@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
 
-function NotFound() {
+const NotFound = () => {
   return (
-    <div className='flex flex-col justify-center'>
-      <h1 className='text-3xl font-bold text-colour-text-500'>
+    <>
+      <h1 className='text-3xl font-bold text-grey-950'>
         Whoops! We are struggling to find that page.
       </h1>
-      <p className='my-1 text-colour-text-400'>Oh no! The page you are looking for doesn't seem to exist .o.</p>
-      <Link className='underline my-3 text-colour-text-400' to='/'>Return Home?</Link>
-    </div>
+      <p className='my-1 text-grey-900'>Oh no! The page you are looking for doesn't seem to exist .o.</p>
+      <Link className='underline my-3 text-grey-900' to='/'>Return Home?</Link>
+    </>
   )
 }
 

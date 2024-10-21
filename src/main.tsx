@@ -22,10 +22,12 @@ createRoot(document.getElementById('root') as HTMLElement).render(
       <Router>
         <div className='inline-flex w-full flex-grow'>
           <NavBar />
-          <div className='flex flex-col justify-center bg-grey-200 flex-grow'>
+          <div className='flex flex-col px-6 py-6 justify-center bg-grey-200 flex-grow'>
             <Routes>
               <Route path='/' element={<Home />}/>
               <Route path='/upload' element={<UnderConstruction />}/>
+              <Route path='/profiles' element={<UnderConstruction />}/>
+              <Route path='/settings' element={<UnderConstruction />}/>
               <Route path='*' element={<NotFound />}/>
             </Routes>
           </div>
