@@ -56,8 +56,16 @@
   }
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 nav li a.active {
   background-color: var(--colour-grey-200);
   color: var(--colour-grey-950);
   font-weight: 600;
+}
+
+.h-svh-neg-title {
+  height: calc(100svh - 3rem);
 }

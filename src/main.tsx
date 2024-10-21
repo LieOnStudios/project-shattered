@@ -20,7 +20,7 @@ createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
       <TitleBar />
       <Router>
-        <div className='inline-flex w-full flex-grow'>
+        <div className='inline-flex w-full flex-grow pt-12 pl-56'>
           <NavBar />
           <div className='flex flex-col px-6 py-6 justify-center bg-grey-200 flex-grow'>
             <Routes>

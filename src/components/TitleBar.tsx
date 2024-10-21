@@ -14,7 +14,7 @@ const TitleBar = () => {
     });
 
     return (
-        <header data-tauri-drag-region className='inline-flex w-full h-12 items-center justify-between border-b-2 border-grey-300 select-none'>
+        <header data-tauri-drag-region className='inline-flex w-full h-12 items-center justify-between border-b-2 border-grey-300 bg-grey-100 select-none fixed'>
             <div className='inline-flex items-center justify-center gap-4 w-56 h-6 border-r-2 border-grey-300'>
                 <div className='w-6 h-6 bg-primary-100 rounded' />
                 <div className='font-bold text-grey-950'>Project Shattered</div>
