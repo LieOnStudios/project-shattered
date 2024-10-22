@@ -2,11 +2,11 @@ use tauri::http::{HeaderMap, HeaderName, HeaderValue};
 
 use std::fs::{self};
 
-pub fn read_data_from_file(path: &str) -> Result<String, Box<dyn std::error::Error>> {
+pub fn read_data_from_file(path: &str) -> Result<String, std::io::Error> {
     // Reads file data
     // Returns file data and err
     let file_data = fs::read_to_string(path);
-    Ok(file_data.unwrap().into())
+    file_data
 }
 
 // pub fn write_data_to_file(data: &str, path: &str) {

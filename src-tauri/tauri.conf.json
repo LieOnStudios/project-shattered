@@ -15,8 +15,8 @@
         "title": "Project Shattered",
         "width": 1280,
         "height": 720,
-        "minWidth": 400,
-        "minHeight": 225,
+        "minWidth": 854,
+        "minHeight": 480,
         "decorations": false
       }
     ],

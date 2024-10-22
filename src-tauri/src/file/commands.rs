@@ -4,19 +4,6 @@ use std::fs::{self};
 use std::path::{self};
 
 #[tauri::command]
-pub fn write_file(data: &str, path: &str) {
-    // Dir err check (if it exists).
-    if fs::metadata(path).is_err() {
-        // Creates dir if it cannot be found.
-        let split_path = path.split("/");
-        let no_file_path = path.replace(split_path.last().unwrap(), "");
-        let _ = fs::create_dir_all(no_file_path);
-    }
-    // Writes data to file.
-    let _ = fs::write(path, data);
-}
-
-#[tauri::command]
 pub fn read_file(path: &str) -> String {
     // Passes values into read_data_from_file().
     // data err check (if file exists and can be read).
@@ -27,6 +14,19 @@ pub fn read_file(path: &str) -> String {
     }
     // Returns file data.
     return file_data.unwrap()
+}
+
+#[tauri::command]
+pub fn write_file(path: &str, data: &str) {
+    // Dir err check (if it exists).
+    if fs::metadata(path).is_err() {
+        // Creates dir if it cannot be found.
+        let split_path = path.split("/");
+        let no_file_path = path.replace(split_path.last().unwrap(), "");
+        let _ = fs::create_dir_all(no_file_path);
+    }
+    // Writes data to file.
+    let _ = fs::write(path, data);
 }
 
 #[tauri::command]

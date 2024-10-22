@@ -40,16 +40,16 @@
   :root[data-theme='oled'] {
     --colour-grey-50: #000;
     --colour-grey-100: #000;
-    --colour-grey-200: #000;
+    --colour-grey-200: #0a0a0a;
     --colour-grey-300: #222;
     --colour-grey-400: #444;
     --colour-grey-500: #555;
-    --colour-grey-600: #666;
-    --colour-grey-700: #777;
-    --colour-grey-800: #aaa;
-    --colour-grey-900: #bbb;
-    --colour-grey-900: #ccc;
-    --colour-grey-950: #eee;
+    --colour-grey-600: #777;
+    --colour-grey-700: #aaa;
+    --colour-grey-800: #ccc;
+    --colour-grey-900: #ddd;
+    --colour-grey-900: #eee;
+    --colour-grey-950: #fff;
     
     /* --colour-primary: 255 115 179;
     --colour-secondary: 111 114 185; */
@@ -57,7 +57,14 @@
 }
 
 ::-webkit-scrollbar {
-  display: none;
+  width: 1rem;
+} ::-webkit-scrollbar-track {
+  padding: 0.1rem;
+  background: var(--colour-grey-100);
+} ::-webkit-scrollbar-thumb {
+  background: var(--colour-grey-300);
+  border: 0.25rem solid var(--colour-grey-100);
+  border-radius: 1rem;
 }
 
 nav li a.active {
