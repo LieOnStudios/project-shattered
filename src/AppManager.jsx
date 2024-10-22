@@ -1,17 +1,18 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { getCurrentWindow } from '@tauri-apps/api/window';
 import { appDataDir } from "@tauri-apps/api/path";
+import { invoke } from '@tauri-apps/api/core';
 const appWindow = getCurrentWindow();
 
-// const defaultConfig = {
-//     theme: 'system',
-//     nav: {
-//         compact: false
-//     }
-// };
+const defaultConfig = {
+    theme: 'system',
+    nav: {
+        compact: false
+    }
+};
 
 const AppManager = () => {
-    // const [config, setconfig] = useState();
+    const [config, setConfig] = useState();
     const [maximised, setMaximised] = useState(false);
 
     appWindow.listen('tauri://resize', async () => {
@@ -31,7 +32,7 @@ const AppManager = () => {
     //         const config_read = await invoke('read_file', { path: `${dataDir}\\config.json` });
     //         const config_json = JSON.parse(config_read);
 
-    //         setconfig(() => {
+    //         setConfig(() => {
     //             fillObject(defaultConfig, config_json)
     //             console.log(config_json);
     //             return({
@@ -60,7 +61,7 @@ const AppManager = () => {
     //     }
     // }
 
-    return { appWindow, appDataDir, maximised };
+    return { appWindow, appDataDir, maximised, config, setConfig };
 };
 
 export default AppManager;

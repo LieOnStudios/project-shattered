@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-  :root[data-theme='light'] {
+  .themes[data-theme='light'] {
     --colour-grey-50: #eee;
     --colour-grey-100: #ddd;
     --colour-grey-200: #d5d5d5;
@@ -20,7 +20,7 @@
     /* --colour-primary: ;
     --colour-secondary: 111 114 185; */
   }
-  :root[data-theme='dark'] {
+  .themes[data-theme='dark'] {
     --colour-grey-50: #111;
     --colour-grey-100: #222;
     --colour-grey-200: #282828;
@@ -37,7 +37,7 @@
     /* --colour-primary: 255 115 179;
     --colour-secondary: 111 114 185; */
   }
-  :root[data-theme='oled'] {
+  .themes[data-theme='oled'] {
     --colour-grey-50: #000;
     --colour-grey-100: #000;
     --colour-grey-200: #0a0a0a;
