@@ -24,7 +24,7 @@
     --colour-grey-50: #111;
     --colour-grey-100: #222;
     --colour-grey-200: #282828;
-    --colour-grey-300: #444;
+    --colour-grey-300: #333;
     --colour-grey-400: #555;
     --colour-grey-500: #666;
     --colour-grey-600: #777;
@@ -68,9 +68,9 @@
 }
 
 nav li a.active {
-  background-color: var(--colour-grey-200);
+  background-color: var(--colour-grey-300);
   color: var(--colour-grey-950);
-  font-weight: 600;
+  
 }
 
 .h-svh-neg-title {
