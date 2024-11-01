@@ -1,7 +1,6 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { getCurrentWindow } from '@tauri-apps/api/window';
 import { appDataDir } from "@tauri-apps/api/path";
-import { invoke } from '@tauri-apps/api/core';
 const appWindow = getCurrentWindow();
 
 const defaultConfig = {
@@ -12,7 +11,6 @@ const defaultConfig = {
 };
 
 const AppManager = () => {
-    const [config, setConfig] = useState();
     const [maximised, setMaximised] = useState(false);
 
     appWindow.listen('tauri://resize', async () => {
@@ -61,7 +59,7 @@ const AppManager = () => {
     //     }
     // }
 
-    return { appWindow, appDataDir, maximised, config, setConfig };
+    return { appWindow, appDataDir, maximised };
 };
 
 export default AppManager;

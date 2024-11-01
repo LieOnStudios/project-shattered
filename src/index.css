@@ -76,3 +76,14 @@ nav li a.active {
 .h-svh-neg-title {
   height: calc(100svh - 3rem);
 }
+
+.shadow-input-unselected {
+  box-shadow: 0 0 0 -1px var(--input-bg), 0 0 0 -2px var(--tw-shadow-color);
+} .focus\:shadow-input-selected:focus {
+  box-shadow: 0 0 0 2px var(--input-bg), 0 0 0 4.5px var(--tw-shadow-color);
+}
+
+.input:focus ~ .input-label, .input:not(:placeholder-shown) ~ .input-label {
+  transform: translate3d(0, -2.65rem, 0);
+  background-color: var(--input-bg);
+}

@@ -6,6 +6,7 @@ import './index.css'
 
 // Pages
 import Home from './pages/Home.jsx'
+import Profiles from './pages/Profiles.jsx'
 import Settings from './pages/Settings.jsx'
 
 // Extra Pages
@@ -43,7 +44,7 @@ const App = () => {
               <Route path='/' element={<Home />}/>
               <Route path='/mods' element={<UnderConstruction />}/>
               <Route path='/upload' element={<UnderConstruction />}/>
-              <Route path='/profiles' element={<UnderConstruction />}/>
+              <Route path='/profiles' element={<Profiles />}/>
               <Route path='/settings' element={<Settings />}/>
               <Route path='*' element={<NotFound />}/>
             </Routes>

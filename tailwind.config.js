@@ -24,7 +24,7 @@ export default {
         primary: {
           100: '#5c27ce'
         }
-      }
+      },
     },
   },
   plugins: [],

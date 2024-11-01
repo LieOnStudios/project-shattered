@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const NotFound = () => {
+const UnderConstruction = () => {
   return (
     <div className='inline-flex flex-col w-full h-full justify-center items-center'>
       <div className='flex flex-col w-full justify-center items-center m-4 gap-4'>
@@ -12,4 +12,4 @@ const NotFound = () => {
   )
 }
 
-export default NotFound
+export default UnderConstruction
