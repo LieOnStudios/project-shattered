@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Route, HashRouter as Router, Routes } from 'react-router-dom'
+import { useState } from "react";
+import { Route, HashRouter as Router, Routes } from 'react-router-dom';
 
 // Styling
 import './index.css'
@@ -17,20 +17,7 @@ import TitleBar from './components/TitleBar.jsx'
 import NavBar from './components/NavBar.jsx'
 
 const App = () => {
-  // const { config } = AppManager();
   const [theme, setTheme] = useState('dark');
-
-  // useEffect(() => {
-  //   if (config != null) {
-  //     if (config.theme === 'system') {
-  //       setTheme(window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-  //     } else {
-  //       console.log(config.theme)
-  //       setTheme(config.theme);
-  //     }
-  //   }
-  //   console.log(config)
-  // }, [config])
 
   return (
     <div className='themes' data-theme={theme}>
