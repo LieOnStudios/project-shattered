@@ -3,6 +3,46 @@
 @tailwind utilities;
 
 @layer base {
+  @media (prefers-color-scheme: light) {
+    .themes[data-theme='system'] {
+      --colour-grey-50: #eee;
+      --colour-grey-100: #ddd;
+      --colour-grey-200: #d5d5d5;
+      --colour-grey-300: #bbb;
+      --colour-grey-400: #999;
+      --colour-grey-500: #888;
+      --colour-grey-600: #777;
+      --colour-grey-700: #666;
+      --colour-grey-800: #555;
+      --colour-grey-900: #444;
+      --colour-grey-900: #333;
+      --colour-grey-950: #222;
+
+      /* --colour-primary: ;
+      --colour-secondary: 111 114 185; */
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .themes[data-theme='system'] {
+      --colour-grey-50: #111;
+      --colour-grey-100: #222;
+      --colour-grey-200: #282828;
+      --colour-grey-300: #333;
+      --colour-grey-400: #555;
+      --colour-grey-500: #666;
+      --colour-grey-600: #777;
+      --colour-grey-700: #888;
+      --colour-grey-800: #aaa;
+      --colour-grey-900: #bbb;
+      --colour-grey-900: #ccc;
+      --colour-grey-950: #eee;
+  
+      /* --colour-primary: 255 115 179;
+      --colour-secondary: 111 114 185; */
+    }
+  }
+
   .themes[data-theme='light'] {
     --colour-grey-50: #eee;
     --colour-grey-100: #ddd;
