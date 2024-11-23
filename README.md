@@ -5,7 +5,7 @@
 > [!NOTE]
 > Project Shattered is in very **early** development, features will be experimental and may be removed.\
 > Some features may also not be implemented due to Curseforge's limited API system.\
-> A useable alpha release is expected to be available in early to mid 2025.
+> A useable alpha release is expected to be available in the first half of 2025.
 
 ## Planned Features (Not final):
 
