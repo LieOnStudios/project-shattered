@@ -10,8 +10,8 @@ const Profiles = () => {
   const [modrithProfilePicture, setModrithProfilePicture] = useState();
 
   return (
-    <div className='inline-flex w-full h-full gap-6 justify-center'>
-      <div className='flex flex-col flex-grow p-4 gap-6 items-center rounded-lg bg-grey-300'>
+    <div className='flex flex-col w-full h-full gap-6 justify-center'>
+      <div className='flex flex-grow p-4 gap-6 items-center rounded-lg bg-grey-300'>
         <h1 className='text-2xl text-grey-950'>Curseforge Profile</h1>
         {curseforgeProfilePicture && <img src={curseforgeProfilePicture}>
         </img>}
@@ -22,7 +22,7 @@ const Profiles = () => {
         }
         <Input id='modrinth-username' label='Username' bgColour='var(--colour-grey-300)' />
       </div>
-      <div className='flex flex-col flex-grow p-4 gap-6 items-center rounded-lg bg-grey-300'>
+      <div className='flex flex-grow p-4 gap-6 items-center rounded-lg bg-grey-300'>
         <h1 className='text-2xl text-grey-950'>Modrinth Profile</h1>
         {modrithProfilePicture && <img src={modrithProfilePicture}>
         </img>}

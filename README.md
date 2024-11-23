@@ -4,15 +4,15 @@
 
 > [!NOTE]
 > Project Shattered is in very **early** development, features will be experimental and may be removed.\
+> Some features may also not be implemented due to Curseforge's limited API system.\
 > A useable alpha release is expected to be available in early to mid 2025.
 
 ## Planned Features (Not final):
 
-- Upload multiple versions to both sites
+- Upload multiple version files to both sites simultaneously
 - Total download count from Curseforge + Modrinth
 - Simple statistics from both sites
-- Title templates for uploading (gloabal and per-project)
-- Description templates for uploading (gloabal and per-project)
+- Title & Description templates for uploading (gloabal and per-project)
 - Keys for Titles & Descriptions (e.g. `${project-name}`, `${version}`, `${max-minecaft-version}`, `${minecraft-version-range}`)
 
 ## Development Tools:

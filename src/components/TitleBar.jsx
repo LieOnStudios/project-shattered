@@ -12,7 +12,7 @@ const TitleBar = () => {
                 <div className='w-6 h-6 bg-primary-100 rounded' />
                 <div className='font-bold text-grey-950'>Project Shattered</div>
             </div>
-            <a href='https://github.com/LieOnStudios/project-shattered/tree/windows' className='font-medium text-xs text-grey-800 hover:text-grey-900 hover:underline'>
+            <a href='https://github.com/LieOnStudios/project-shattered/tree/windows' target='_blank' className='font-medium text-xs text-grey-800 hover:text-grey-900 hover:underline'>
                 v{APP_VERSION} - {BUILD_TYPE} build
             </a>
             <div className='inline-flex items-center justify-center gap-6 w-40 h-6 border-l-2 border-grey-300'>
