@@ -4,19 +4,6 @@ const Home: Component = () => {
 	return (
 		<>
 			<div>Hola</div>
-			<div>Hola</div>
-			<div>Hola</div>
-			<div>Hola</div>
-			<div>Hola</div>
-			<div>Hola</div>
-			<div>Hola</div>
-			<div>Hola</div>
-			<div>Hola</div>
-			<div>Hola</div>
-			<div>Hola</div>
-			<div>Hola</div>
-			<div>Hola</div>
-			<div>Hola</div>
 		</>
 	);
 };

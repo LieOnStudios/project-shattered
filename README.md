@@ -10,9 +10,9 @@
 ## Planned Features (Not final):
 
 - Upload multiple version files to both sites simultaneously.
-- Total download count from Curseforge + Modrinth.
+- Total download count from Curseforge + Modrinth (Only available from added mods).
 - ~~Simple statistics from both sites.~~
-- Title & Description templates for uploading (gloabal and per-project)
+- Title & Description templates for uploading (Gloabal and per-project).
 - Replacement keys for Titles & Descriptions. e.g.
   - `${project-name}`
   - `${version}`
