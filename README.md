@@ -31,7 +31,7 @@
 
 - Built with [**Tauri**](https://v2.tauri.app/) in [**Rust**](https://www.rust-lang.org/) to perform tasks quickly.
 - Using [**Vite**](https://vite.dev/) as a fast and powerful frontend compiler with:
-  - [**SolidJS**](https://solidjs.com/): a Javascript library to build pages.
+  - [**SolidJS**](https://solidjs.com/): a JavaScript library to build pages.
   - [**Tailwind**](https://tailwindcss.com/): a CSS utility framework.
 - Coded and ran with [**VSCodium**](https://vscodium.com/).
 
