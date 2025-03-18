@@ -20,17 +20,17 @@ const TitleBar: Component = () => {
 	return (
 		<header
 			data-tauri-drag-region
-			class="inline-flex w-full h-12 p-2 items-center justify-end bg-slate-900 select-none"
+			class="inline-flex w-full h-12 p-2 items-center justify-end select-none"
 		>
 			<div class="inline-flex items-center justify-center gap-2">
 				<button
-					class="flex justify-center items-center text-slate-100 w-8 h-8 rounded-md hover:bg-slate-700 cursor-pointer"
+					class="flex justify-center items-center text-slate-900 dark:text-slate-100 w-8 h-8 rounded-md hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer"
 					on:click={() => window.minimize()}
 				>
 					<Minus size={16} />
 				</button>
 				<button
-					class="flex justify-center items-center text-slate-100 w-8 h-8 rounded-md hover:bg-slate-700 cursor-pointer"
+					class="flex justify-center items-center text-slate-900 dark:text-slate-100 w-8 h-8 rounded-md hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer"
 					on:click={() => window.toggleMaximize()}
 				>
 					<Switch>
@@ -43,7 +43,7 @@ const TitleBar: Component = () => {
 					</Switch>
 				</button>
 				<button
-					class="flex justify-center items-center text-slate-100 w-8 h-8 rounded-md hover:bg-red-700/50 cursor-pointer"
+					class="flex justify-center items-center text-slate-900 dark:text-slate-100 w-8 h-8 rounded-md hover:bg-red-600/50 cursor-pointer"
 					on:click={() => window.close()}
 				>
 					<X size={16} />
