@@ -18,9 +18,9 @@ const App: Component<Props> = (props) => {
 			<NavBar />
 			<div class="flex flex-col grow overflow-hidden">
 				<TitleBar />
-				<div class="flex flex-col grow overflow-auto gap-72 p-2 rounded-lg text-slate-100 bg-slate-800">
+				<main class="flex flex-col grow overflow-auto gap-72 mr-2 mb-2 p-2 rounded-lg text-slate-100 bg-slate-800">
 					{props.children}
-				</div>
+				</main>
 			</div>
 		</>
 	);
