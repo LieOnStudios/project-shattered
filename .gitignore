@@ -1,2 +1,28 @@
-node_modules
-dist
+# Node.js (frontend)
+node_modules/
+dist/
+build/
+*.log
+.env
+.env.*
+
+# Rust (backend)
+/target/
+**/*.rs.bk
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*.swp
+*~
+
+# IDEs
+.vscode/
+.idea/
+*.code-workspace

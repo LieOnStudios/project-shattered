@@ -1,5 +1,5 @@
 /* @refresh reload */
-import { Component } from "solid-js";
+import { Component, createEffect } from "solid-js";
 import { render } from "solid-js/web";
 import Routes from "./routes";
 import "./index.css";
@@ -7,12 +7,18 @@ import "./index.css";
 // Components
 import TitleBar from "./components/title_bar";
 import NavBar from "./components/nav_bar";
+import { invoke } from "@tauri-apps/api/core";
 
 interface Props {
   children?: HTMLElement;
 }
 
 const App: Component<Props> = (props) => {
+  createEffect(async () => {
+    const message = await invoke<string>("get_encryption_key");
+    console.log(message);
+  });
+
   return (
     <>
       <NavBar />

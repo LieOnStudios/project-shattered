@@ -7,6 +7,7 @@ const Home: Component = () => {
     <>
       <div class="inline-flex gap-4 items-center">
         <Button>
+          <HomeIcon size={16} />
           <span>Primary</span>
         </Button>
         <Button variant="secondary">

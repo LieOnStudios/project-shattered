@@ -2,5 +2,5 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 fn main() {
-    project_shattered_lib::run()
+    project_shattered_lib::run();
 }

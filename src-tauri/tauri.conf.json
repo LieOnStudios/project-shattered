@@ -1,38 +1,38 @@
 {
-	"$schema": "https://schema.tauri.app/config/2",
-	"productName": "project_shattered",
-	"version": "../package.json",
-	"identifier": "ProjectShattered",
-	"build": {
-		"beforeDevCommand": "bun dev",
-		"devUrl": "http://localhost:1420",
-		"beforeBuildCommand": "bun run build",
-		"frontendDist": "../dist"
-	},
-	"app": {
-		"windows": [
-			{
-				"title": "Project Shattered",
-				"width": 1280,
-				"height": 720,
-				"minWidth": 854,
-				"minHeight": 480,
-				"decorations": false
-			}
-		],
-		"security": {
-			"csp": null
-		}
-	},
-	"bundle": {
-		"active": true,
-		"targets": "all",
-		"icon": [
-			"icons/32x32.png",
-			"icons/128x128.png",
-			"icons/128x128@2x.png",
-			"icons/icon.icns",
-			"icons/icon.ico"
-		]
-	}
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "project_shattered",
+  "version": "../package.json",
+  "identifier": "ProjectShattered",
+  "build": {
+    "beforeDevCommand": "bun dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "bun run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Project Shattered",
+        "width": 1280,
+        "height": 720,
+        "minWidth": 854,
+        "minHeight": 480,
+        "decorations": false
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  }
 }
